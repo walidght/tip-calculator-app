@@ -1,0 +1,225 @@
+* {
+    box-sizing: border-box;
+    font-family: 'Space Mono', monospace;
+}
+
+body {
+    min-height: 100vh;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: hsl(185, 41%, 84%);
+}
+
+button {
+    cursor: pointer;
+}
+
+main {
+    max-width: 53rem;
+    width: 90%;
+    height: max(55%, content-fit);
+    padding: 1.5rem;
+    background-color: hsl(0, 0%, 100%);
+    border-radius: 15px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+#inputs,
+#display {
+    height: 100%;
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+#inputs {
+    padding: 1rem;
+    width: 45%;
+}
+
+#display {
+    padding: 2rem;
+    border-radius: 10px;
+    background-color: hsl(183, 100%, 15%);
+}
+
+.display-button {
+    width: 100%;
+    height: 2.75rem;
+    font-size: 1.5rem;
+    font-weight: 700;
+    border: none;
+    border-radius: 5px;
+    color: hsl(183, 100%, 15%);
+    background-color: hsl(172, 67%, 45%);
+    opacity: 0.2;
+    margin-top: 3rem;
+    cursor: not-allowed;
+}
+
+.display-button-hover {
+    opacity: 1;
+    cursor: pointer;
+}
+
+.display-button-hover:hover {
+    background-color: hsl(185, 41%, 84%);
+}
+
+.display-price-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.display-label {
+    color: hsl(0, 0%, 100%);
+}
+
+.display-comment {
+    font-weight: 700;
+    font-size: 0.8rem;
+    color: hsl(184, 14%, 56%);
+}
+
+.display-label,
+.display-comment {
+    line-height: 0.4rem;
+}
+
+.display-price {
+    max-width: 13rem;
+    font-size: 2rem;
+    font-weight: 700;
+    color: hsl(172, 67%, 45%);
+    overflow-x: auto;
+}
+
+#percentage-buttons-container {
+    display: inline-grid;
+    grid-template-columns: repeat(auto-fill, minmax(5rem, 1fr));
+    gap: 1rem;
+}
+
+.inputs-button {
+    height: 2.5rem;
+    font-weight: 700;
+    font-size: 1.1rem;
+    color: hsl(0, 0%, 100%);
+    background-color: hsl(183, 100%, 15%);
+    border: none;
+    border-radius: 5px;
+}
+
+.inputs-button-clicked {
+    color: hsl(183, 100%, 15%);
+    background-color: hsl(172, 67%, 45%);
+    cursor: default;
+}
+
+.inputs-button-clicked:hover {
+    background-color: hsl(172, 67%, 45%);
+}
+
+.inputs-button-not-clicked:hover {
+    background-color: hsl(185, 41%, 84%);
+}
+
+.inputs-input-grid {
+    height: 2.5rem;
+    font-weight: 700;
+    font-size: 1.1rem;
+    color: hsl(183, 100%, 15%);
+    background-color: hsl(189, 41%, 97%);
+    border: none;
+    border-radius: 5px;
+    text-align: center;
+}
+
+.inputs-input-grid:focus {
+    outline-color: hsl(172, 67%, 45%);
+    outline-width: 1px;
+}
+
+.inputs-input-grid::placeholder {
+    color: hsl(186, 14%, 43%);
+}
+
+.inputs-input {
+    padding-right: 1rem;
+    color: hsl(183, 100%, 15%);
+    text-align: right;
+}
+
+.inputs-label {
+    color: hsl(186, 14%, 43%);
+    font-weight: 700;
+    font-size: 0.9rem;
+    line-height: 1rem;
+}
+
+.inputs-input-invalid {
+    border: solid hsl(0, 76%, 50%) 2px;
+}
+
+#num-ppl-text {
+    display: flex;
+    justify-content: space-between;
+}
+
+#num-ppl-err {
+    color: hsl(0, 76%, 50%);
+    display: none;
+}
+
+@media (max-width: 750px) {
+    :root {
+        font-size: 14px;
+    }
+    main {
+        margin: 2rem 0;
+        flex-direction: column;
+    }
+
+    #inputs,
+    #display {
+        width: 100%;
+    }
+
+    #inputs {
+        padding: 0;
+        margin-bottom: 1rem;
+    }
+
+    #percentage-buttons-container {
+        display: inline-grid;
+        grid-template-columns: repeat(auto-fill, minmax(7rem, 1fr));
+        gap: 0.8rem;
+    }
+}
+
+@media (max-width: 350px) {
+    .display-price-container {
+        align-items: flex-start;
+        flex-direction: column;
+    }
+}
+
+/* removes arrows from  bers input fields*/
+/* Chrome, Safari, Edge, Opera */
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
+
+/* Firefox */
+input[type='number'] {
+    -moz-appearance: textfield;
+}
