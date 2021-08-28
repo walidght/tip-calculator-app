@@ -23,13 +23,15 @@
         <main>
             <section id="inputs">
                 <p class="inputs-label">Bill</p>
-
-                <input
-                    type="number"
-                    id="bill-input"
-                    class="inputs-input inputs-input-grid"
-                    placeholder="0"
-                />
+                <div class="input-container">
+                    <i class="icons" id="dollar-icon"></i
+                    ><input
+                        type="number"
+                        id="bill-input"
+                        class="inputs-input inputs-input-grid"
+                        placeholder="0"
+                    />
+                </div>
                 <p class="inputs-label">Select Tip %</p>
                 <div id="percentage-buttons-container">
                     <button
@@ -73,13 +75,15 @@
                     <p class="inputs-label">Number of People</p>
                     <p class="inputs-label" id="num-ppl-err">Can't be zero</p>
                 </div>
-
-                <input
-                    type="number"
-                    id="num-of-ppl-input"
-                    placeholder="0"
-                    class="inputs-input-grid inputs-input"
-                />
+                <div class="input-container">
+                    <i class="icons" id="person-icon"></i>
+                    <input
+                        type="number"
+                        id="num-of-ppl-input"
+                        placeholder="0"
+                        class="inputs-input-grid inputs-input"
+                    />
+                </div>
             </section>
 
             <section id="display">

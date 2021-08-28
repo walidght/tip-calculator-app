@@ -46,7 +46,6 @@ document.querySelectorAll('.inputs-button').forEach((element) => {
         event.target.classList.remove('inputs-button-not-clicked');
         tip = parseInt(event.target.dataset.value);
         document.querySelector('#custom-tip-rate').value = '';
-        console.log('tip rate : ', tip);
         calculateTotal();
     });
 });
